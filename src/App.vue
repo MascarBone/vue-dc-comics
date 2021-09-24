@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('scss/generic.scss');
+// @import url('scss/generic.scss');
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
