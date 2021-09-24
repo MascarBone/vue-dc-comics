@@ -88,7 +88,6 @@ export default {
 
         
         ul {
-            list-style: none;
             display: flex;
 
 

@@ -25,7 +25,7 @@ export default {
 
     .row {    
         width: 1200px;
-        height: 35vh;        
+        height: 30vh;        
         margin: 0 auto;            
         display: flex;
         align-items: center;
