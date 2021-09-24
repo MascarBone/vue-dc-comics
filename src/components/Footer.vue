@@ -166,18 +166,27 @@ export default {
         background-image: url('../assets/images/footer-bg.jpg');
         background-size: cover;
         background-position-x: center;
-
+        overflow: hidden;       
         
         h3 {
             color: white;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-bottom: 15px;
+            line-height: 1.3rem;
         }
         li {
             color: grey;
+
         }
         .row {
         width: 1200px;
         height: 45vh;
         margin: 0 auto;
+        padding: 30px 0;
     }
     }
     .bot-wrapper {        
@@ -208,13 +217,16 @@ export default {
     }
     }
 
-    // .footer-logo {
-        // display: flex;
-        // justify-content: center;
-
-        // img {
-            // vertical-align: middle;
-        // }
-    // }
+    .footer-logo {
+        padding:  0 50px;
+        position: relative;
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            
+            
+        }
+    }
     
 </style>
