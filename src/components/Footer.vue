@@ -1,27 +1,40 @@
 <template>
-  <footer>
-      <div class="top-wrapper">
-        <div class="row">
-            <div class="side footer-list">
-                <div v-for="(item,index) in listFooter" :key="index" class="">
-                    <h3>{{item.title}}</h3>
-                    <ul>
-                        <li v-for="(el,yndex) in item.list" :key="yndex">{{el.link}}</li>
-                    </ul>
-                </div>
+    <footer>
+        <div class="top-wrapper">
+            <div class="row">
+                <div class="side footer-list">
+                    <div v-for="(item,index) in listFooter" :key="index" class="">
+                        <h3>{{item.title}}</h3>
+                        <ul>
+                            <li v-for="(el,yndex) in item.list" :key="yndex">{{el.link}}</li>
+                        </ul>
+                    </div>
                 
+                </div>
+                <div class="side footer-logo">
+                    <img src="../assets/images/dc-logo-bg.png" alt="dc-logo-bg">
+                </div>
             </div>
-            <div class="side footer-logo">
-                <img src="../assets/images/dc-logo-bg.png" alt="dc-logo-bg">
-            </div>
-         </div>
-      </div>
-      <div class="bot-wrapper">
-        <div class="row">
+        </div>
+        <div class="bot-wrapper">
+            <div class="row">
+                <div>
+                    <button>Sign Up Now!</button>
+                    
+                </div>
+                <nav>
+                    <a href="">{{followUs.title.toUpperCase()}}</a>
+                    <div v-for="(item,index) in followUs.icons" :key="index">
+                        <img :src="'../assets/images/' + item.url" :alt="item.url">
+                        <p>{{item.url}}</p>                        
+                        
 
-         </div>
-      </div>
-  </footer>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <img src="../assets/images/footer-facebook.png" alt="../assets/images/footer-facebook.png">
+    </footer>
 </template>
 
 <script>
@@ -150,7 +163,31 @@ export default {
                 ],
             },
             ],          
-
+            followUs:{
+                title: 'follow us',
+                icons: [
+                    {
+                        url: 'footer-facebook.png',
+                        alt: 'facebook icon',
+                    },
+                    {
+                        url: 'footer-twitter.png',
+                        alt: 'twitter icon',
+                    },
+                    {
+                        url: 'footer-youtube.png',
+                        alt: 'youtube icon',
+                    },
+                    {
+                        url: 'footer-pinterest.png',
+                        alt: 'pinterest icon',
+                    },
+                    {
+                        url: 'footer-periscope.png',
+                        alt: 'periscope icon',
+                    },
+                ]
+            }
         }
     }
 
@@ -191,7 +228,7 @@ export default {
     }
     .bot-wrapper {        
         background-color: black;
-
+        color: white;
         .row {            
             width: 1200px;
             height: 10vh;

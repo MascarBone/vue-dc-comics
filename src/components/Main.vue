@@ -3,20 +3,35 @@
       <div class="wrapper">
             <div class="row">
                 <h2>--  Content goes here  --</h2>
+                
             </div>
+            <Card :source="Cards.thumb"/>
       </div>
       
   </main>
 </template>
 
 <script>
+import Card from './Card.vue'
+
+import Cards from '../data/dc-comics.json'
+
 export default {
 
+    components: {
+        Card,
+    },
+    data: function () {
+        return {
+            Cards,
+        }
+    }
 }
 </script>
 
 <style scoped lang="scss">
-    @import url('../scss/generic.scss');
+    @import url('../style/generic.scss');
+    @import url('../style/variables.scss');
 
     .wrapper {        
         // display: flex;
