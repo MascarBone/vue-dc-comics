@@ -165,7 +165,8 @@ export default {
                     }
                 ],
             },
-            ],          
+            ],     
+                 
             followUs:{
                 title: 'follow us',
                 icons: [
