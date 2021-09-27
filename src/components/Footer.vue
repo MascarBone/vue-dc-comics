@@ -25,7 +25,7 @@
                 <nav>
                     <a href="">{{followUs.title.toUpperCase()}}</a>
                     <div v-for="(item,index) in followUs.icons" :key="index">
-                        <img :src="'../assets/images/' + item.url" :alt="item.url">
+                        <img :src="require('../assets/images/' + item.url)" :alt="item.url">
                         <p>{{item.url}}</p>                        
                         
 

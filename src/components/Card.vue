@@ -1,6 +1,10 @@
 <template>
-  <div>
-      {{thumb}}
+  <div class="card">
+      <div class="card-image">
+          <img :src="thumb" alt="">
+      </div>
+
+      <p>{{series}}</p>
   </div>
 </template>
 
@@ -15,6 +19,29 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import '../style/variables.scss';
+
+    .card {
+        padding: 20px;
+
+        
+        p {
+            margin-bottom: 30px;
+            color: $colorWhite;
+            text-transform: uppercase;
+        }
+    }
+    .card-image {
+        height: 180px;
+        background-color: teal;
+        overflow: hidden;
+        margin-bottom: 15px;
+
+        img {
+            width: 100%;
+        }
+
+    }
 
 </style>
