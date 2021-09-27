@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- <h1>TESTO DI PROVA</h1> -->
+    <h1>TESTO DI PROVA</h1>
     <Header />
     <Main />
     <Footer />
@@ -23,13 +23,13 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('style/generic.scss');
-@import url('style/variables.scss');
+@import url('./style/generic.scss');
+@import url('./style/variables.scss');
 
-// h1 {
-//   background-color: tomato;
-//   // color: $colorWhite;
-// }
+h1 {
+  background-color: tomato;
+  // color: $colorWhite;
+}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
