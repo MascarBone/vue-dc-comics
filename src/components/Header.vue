@@ -1,16 +1,18 @@
 <template>
   <header>
-      <div class="row">
-          <div class="header-logo">
-              <img src="../assets/images/dc-logo.png" alt="dc-logo">
-          </div>
-          <nav class="header-nav">
-              <ul>
-                  <li v-for="(item, index) in navList" :key="index" >
-                      <a href="">{{item.link}}</a>
-                  </li>
-              </ul>
-          </nav>
+      <div class="wrapper">
+        <div class="row">
+            <div class="header-logo">
+                <img src="../assets/images/dc-logo.png" alt="dc-logo">
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li v-for="(item, index) in navList" :key="index" >
+                        <a href="">{{item.link}}</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
       </div>
   </header>
 </template>
@@ -70,13 +72,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    
-    .row {
+    @import '../style/variables.scss';
+
+    .wrapper {
         width: 1200px;
+        margin: 0 auto;
+    }
+    .row {
         height: 15vh;
         display: flex;
         align-items: center;
-        margin: 0 auto;
         
     }
 
@@ -94,7 +99,10 @@ export default {
             a {
                 text-decoration: none;
                 margin: 0 10px;
+                text-transform: uppercase;
+                color: $colorBlack;
             }
+            
         }
     }
 

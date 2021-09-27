@@ -1,39 +1,42 @@
 <template>
     <footer>
-        <div class="top-wrapper">
-            <div class="row">
-                <div class="side footer-list">
-                    <div v-for="(item,index) in listFooter" :key="index" class="">
-                        <h3>{{item.title}}</h3>
-                        <ul>
-                            <li v-for="(el,yndex) in item.list" :key="yndex">{{el.link}}</li>
-                        </ul>
-                    </div>
-                
-                </div>
-                <div class="side footer-logo">
-                    <img src="../assets/images/dc-logo-bg.png" alt="dc-logo-bg">
-                </div>
-            </div>
-        </div>
-        <div class="bot-wrapper">
-            <div class="row">
-                <div>
-                    <button>Sign Up Now!</button>
+        <div class="top-bg">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="side footer-list">
+                        <div v-for="(item,index) in listFooter" :key="index" class="">
+                            <h3>{{item.title}}</h3>
+                            <ul>
+                                <li v-for="(el,yndex) in item.list" :key="yndex">{{el.link}}</li>
+                            </ul>
+                        </div>
                     
-                </div>
-                <nav>
-                    <a href="">{{followUs.title.toUpperCase()}}</a>
-                    <div v-for="(item,index) in followUs.icons" :key="index">
-                        <img :src="require('../assets/images/' + item.url)" :alt="item.url">
-                        <p>{{item.url}}</p>                        
-                        
-
                     </div>
-                </nav>
+                    <div class="side footer-logo">
+                        <img src="../assets/images/dc-logo-bg.png" alt="dc-logo-bg">
+                    </div>
+                </div>
             </div>
         </div>
-        <img src="../assets/images/footer-facebook.png" alt="../assets/images/footer-facebook.png">
+        
+        <div class="bot-bg">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="btn-box">
+                        <button>sign-up now!</button>
+                    </div>
+
+                    <nav>
+                        <a href="">{{followUs.title.toUpperCase()}}</a>
+                        <div v-for="(item,index) in followUs.icons" :key="index">
+                            <img :src="require('../assets/images/' + item.url)" :alt="item.url">                    
+                            
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </footer>
 </template>
 
@@ -195,11 +198,21 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    // footer {
-    //      
-    // }
+@import '../style/variables.scss';
 
-    .top-wrapper {        
+    .wrapper {    
+        width: 1200px;
+        margin: 0 auto;
+    } 
+    .row {
+        display: flex;
+
+        .side {
+            width: 50%;
+        }
+    }
+
+    .top-bg {        
         background-image: url('../assets/images/footer-bg.jpg');
         background-size: cover;
         background-position-x: center;
@@ -220,18 +233,9 @@ export default {
 
         }
         .row {
-        width: 1200px;
         height: 45vh;
         margin: 0 auto;
         padding: 30px 0;
-    }
-    }
-    .bot-wrapper {        
-        background-color: black;
-        color: white;
-        .row {            
-            width: 1200px;
-            height: 10vh;
         }
     }
 
@@ -244,16 +248,6 @@ export default {
             width: calc(100% / 4);
         }
     }
-    
-    .row {
-        display: flex;
-
-        
-        .side {
-            width: 50%;
-    }
-    }
-
     .footer-logo {
         padding:  0 50px;
         position: relative;
@@ -265,5 +259,44 @@ export default {
             
         }
     }
+
+    .bot-bg {        
+        background-color: black;
+        color: white;
+
+        .row {            
+            padding: 30px 0;
+
+            .btn-box {
+                flex-grow: 1;
+            }
+            button {
+                background-color: transparent;
+                padding: 10px 15px;
+                text-transform: uppercase;
+                color: $colorWhite;
+                font-size: 1.2rem;
+                border: 2px solid $colorPrimaryBlue;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+
+                a {
+                    text-decoration: none;
+                    color: $colorPrimaryBlue;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                }
+
+                * {
+                    margin-left: 15px;
+
+                }
+            }
+        }
+    }
+
     
 </style>
